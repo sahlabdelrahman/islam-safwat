@@ -1,0 +1,17 @@
+/** @format */ /** @format */
+.add-video {
+  margin-bottom: 32px;
+}
+.add-video form {
+  display: flex;
+}
+.add-video form input[type=text] {
+  display: inline-block;
+  width: 50%;
+  margin-right: 8px;
+  padding: 5px 9px;
+  background-color: rgb(246, 246, 246);
+  border: 1px solid transparent;
+  border-radius: 6px;
+  outline: none;
+}

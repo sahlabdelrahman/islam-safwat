@@ -1,0 +1,86 @@
+/** @format */
+
+@use "../../scss/variables" as v;
+
+.login {
+  padding-top: v.$l;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h2 {
+      margin-bottom: v.$l;
+    }
+
+    > div {
+      display: flex;
+      flex-direction: column;
+      width: 40%;
+      margin-bottom: v.$m;
+
+      label {
+        font-size: 14px;
+        margin-bottom: 4px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+
+      input {
+        height: 20px;
+        padding: 5px 9px;
+        background-color: rgb(246, 246, 246);
+        border: 1px solid transparent;
+        border-radius: 6px;
+        outline: none;
+      }
+
+      a {
+        font-size: 14px;
+        font-weight: 700;
+        text-decoration: underline !important;
+        color: #000;
+        margin-left: auto;
+        &.back {
+          display: flex;
+          align-items: center;
+          margin-left: 0;
+          svg {
+            font-size: v.$m;
+            margin-right: v.$s;
+          }
+        }
+      }
+
+      button {
+        padding: 10px 25px;
+        background-color: #000;
+        color: #fff;
+        border: 1px solid #000;
+        border-radius: 6px;
+        font-size: 16px;
+        font-weight: 700;
+        cursor: pointer;
+      }
+    }
+
+    @media (max-width: 899px) {
+      > div {
+        width: 50%;
+      }
+    }
+    @media (max-width: 599px) {
+      > div {
+        width: 60%;
+      }
+    }
+  }
+  button {
+    background-color: var(--background-color-for-buttons) !important;
+    color: var(--font-color-for-buttons) !important;
+  }
+}

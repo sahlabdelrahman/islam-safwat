@@ -1,0 +1,150 @@
+/** @format */
+
+@use "../../../scss/variables" as v;
+
+.single-page {
+  padding: v.$l 0;
+  text-align: center;
+
+  button {
+    background-color: var(--background-color-for-buttons) !important;
+    color: var(--font-color-for-buttons) !important;
+  }
+
+  svg {
+    color: var(--font-color) !important;
+  }
+
+  .add-image {
+    margin-bottom: v.$l;
+    text-align: left;
+    form {
+      display: flex;
+      align-items: flex-end;
+
+      textarea {
+        width: 50%;
+        padding: 5px 9px;
+        background-color: rgb(246, 246, 246);
+        border: 1px solid transparent;
+        border-radius: 6px;
+        outline: none;
+      }
+
+      input[type="file"] {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+    }
+
+    .MuiLinearProgress-root {
+      color: #000;
+      width: 100px;
+      margin-bottom: 2px;
+    }
+
+    .thumbnail {
+      margin-top: v.$l;
+      img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .head-of-page {
+    margin-bottom: v.$xl;
+
+    h3 {
+      margin-bottom: v.$l;
+    }
+  }
+
+  .content-of-page {
+    .item {
+      margin-bottom: v.$l;
+      cursor: pointer;
+
+      p {
+        margin: v.$l 0;
+      }
+
+      > div {
+        position: relative;
+        .overlay {
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          top: 0;
+          width: 100%;
+          height: 100%;
+          max-width: 600px;
+          margin: auto;
+          background: rgba(0, 0, 0, 0.5);
+          overflow: hidden;
+          opacity: 0;
+          transition: 0.5s ease-in-out;
+
+          display: flex;
+          justify-content: flex-end;
+
+          .controls {
+            display: flex;
+            svg {
+              margin-top: v.$s;
+              margin-right: v.$s;
+              color: white;
+              cursor: pointer;
+            }
+          }
+        }
+
+        &:hover {
+          .overlay {
+            opacity: 1;
+          }
+        }
+      }
+
+      img {
+        // width: 70%;
+        // height: auto;
+        // object-fit: contain;
+        max-width: 600px;
+        margin: auto;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+
+      .overlay {
+      }
+    }
+  }
+
+  .item-of-text {
+    margin-bottom: v.$l;
+
+    > div {
+      position: relative;
+      display: flex;
+      justify-content: center;
+
+      .controls {
+        display: flex;
+        position: absolute;
+        right: 0;
+        top: -30px;
+        margin-bottom: 50px;
+        svg {
+          margin-top: v.$s;
+          margin-right: v.$s;
+          color: white;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

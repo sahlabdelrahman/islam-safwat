@@ -1,0 +1,39 @@
+/** @format */
+
+@use "../../scss/variables" as v;
+
+a {
+  text-decoration: none !important;
+  text-transform: capitalize;
+  color: var(--font-color) !important;
+}
+
+.landing-page {
+  a {
+    color: #fff !important;
+  }
+
+  svg {
+    color: #fff !important;
+  }
+}
+
+.MuiAppBar-root {
+  background-color: var(--background-color) !important;
+  color: var(--font-color) !important;
+  box-shadow: var(--box-shadow) !important;
+
+  &.landing-page {
+    background-color: transparent !important;
+    box-shadow: none !important;
+  }
+}
+
+.button {
+  background-color: var(--background-color-for-buttons) !important;
+  color: var(--font-color-for-buttons) !important;
+}
+
+.icon {
+  color: var(--font-color-for-buttons) !important;
+}

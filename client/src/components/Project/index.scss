@@ -1,0 +1,263 @@
+/** @format */
+
+@use "../../scss/variables" as v;
+
+.image-item {
+  cursor: pointer;
+
+  > a,
+  div {
+    position: relative;
+    display: block;
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      background-color: #cccccc !important;
+    }
+
+    .overlay {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      overflow: hidden;
+      opacity: 0;
+      transition: 0.5s ease-in-out;
+
+      display: flex;
+      align-items: flex-end;
+
+      .controls {
+        display: flex;
+        position: absolute;
+        right: 0;
+        top: 0;
+        svg {
+          margin-top: v.$s;
+          margin-right: v.$s;
+          color: white;
+          cursor: pointer;
+        }
+      }
+
+      .share-buttons {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
+      .text {
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        width: 100%;
+
+        .caption {
+          display: flex;
+          align-items: flex-end;
+          width: 85%;
+          height: 85%;
+          font-size: 16px;
+          font-weight: 700;
+          line-height: 36px;
+          color: #fff;
+          cursor: pointer;
+          display: -webkit-box;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+      }
+
+      .title-and-description {
+        padding: 20px;
+        width: 100%;
+        color: #fff;
+        a {
+          color: #fff !important;
+        }
+        h3 {
+          width: 85%;
+          height: 85%;
+          display: -webkit-box;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+
+        p {
+          width: 85%;
+          height: 85%;
+          display: -webkit-box;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+      }
+    }
+    &:hover {
+      .overlay {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.add-item {
+  margin-bottom: v.$l;
+  button {
+    background-color: var(--background-color-for-buttons) !important;
+    color: var(--font-color-for-buttons) !important;
+  }
+
+  form {
+    .with-textarea-only {
+      display: flex;
+      align-items: flex-end;
+      margin-top: v.$l;
+
+      > div {
+        display: flex;
+        align-items: flex-end;
+      }
+    }
+    > div {
+      display: flex;
+      align-items: flex-end;
+    }
+
+    textarea {
+      width: 50%;
+      padding: 5px 9px;
+      line-height: 18px;
+      background-color: rgb(246, 246, 246);
+      border: 1px solid transparent;
+      border-radius: 6px;
+      outline: none;
+    }
+  }
+
+  .MuiLinearProgress-root {
+    color: var(--font-color-for-buttons);
+    width: 100px;
+    margin-bottom: 2px;
+
+    &.project {
+      width: 50%;
+      margin-top: 16px;
+    }
+  }
+
+  .thumbnail {
+    margin-top: v.$l;
+    img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+    }
+  }
+
+  .thumbnails {
+    margin-top: v.$l;
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(4, 200px);
+      gap: v.$s;
+
+      .item {
+        width: 200px;
+        .grow-item {
+          position: relative;
+          background: #f6f6f6;
+
+          .overlay {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            width: 200px;
+            height: 200px;
+            background: rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            opacity: 0;
+            transition: 0.5s ease-in-out;
+
+            display: flex;
+            justify-content: flex-end;
+
+            .controls {
+              display: flex;
+              svg {
+                margin-top: v.$s;
+                margin-right: v.$s;
+                color: white;
+                cursor: pointer;
+              }
+            }
+          }
+          &:hover {
+            .overlay {
+              opacity: 1;
+            }
+          }
+        }
+        .form {
+          textarea {
+            width: 100%;
+            box-sizing: border-box;
+            border-radius: 0 0 6px 6px;
+          }
+        }
+      }
+
+      @media (min-width: 1100px) {
+        grid-template-columns: repeat(5, 200px);
+      }
+
+      @media (max-width: 900px) {
+        grid-template-columns: repeat(3, 200px);
+      }
+
+      @media (max-width: 700px) {
+        grid-template-columns: repeat(2, 200px);
+      }
+
+      @media (max-width: 500px) {
+        grid-template-columns: repeat(1, 200px);
+      }
+    }
+
+    img {
+      width: 200px;
+      height: 200px;
+      object-fit: contain !important;
+      border-bottom: 1px solid #d7d4d4 !important;
+      padding-bottom: 1px !important;
+    }
+  }
+
+  input[type="text"] {
+    display: block;
+    width: 50%;
+    padding: 5px 9px;
+    margin-bottom: v.$s;
+    background-color: rgb(246, 246, 246);
+    border: 1px solid transparent;
+    border-radius: 6px;
+    outline: none;
+  }
+
+  input[type="file"] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+}

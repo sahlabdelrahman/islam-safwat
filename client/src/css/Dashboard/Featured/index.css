@@ -1,0 +1,57 @@
+/** @format */ /** @format */
+.featured-dashboard {
+  padding: 32px 0;
+}
+.featured-dashboard .add-featured {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 32px;
+}
+.featured-dashboard .add-featured .MuiLinearProgress-root {
+  color: #000;
+  margin-bottom: 2px;
+}
+.featured-dashboard .add-featured .thumbnail {
+  margin-right: auto;
+}
+.featured-dashboard .add-featured .thumbnail img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+.featured-dashboard .add-featured input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.featured-dashboard .featured-item > div {
+  position: relative;
+}
+.featured-dashboard .featured-item > div img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.featured-dashboard .featured-item > div .overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+  display: flex;
+  justify-content: flex-end;
+}
+.featured-dashboard .featured-item > div .overlay svg {
+  margin-top: 8px;
+  margin-right: 8px;
+  color: white;
+  cursor: pointer;
+}
+.featured-dashboard .featured-item > div:hover .overlay {
+  width: 100%;
+}

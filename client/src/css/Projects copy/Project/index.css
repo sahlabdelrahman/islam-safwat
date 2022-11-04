@@ -1,0 +1,97 @@
+/** @format */ /** @format */
+.single-page {
+  padding: 32px 0;
+  text-align: center;
+}
+.single-page button {
+  background-color: var(--background-color-for-buttons) !important;
+  color: var(--font-color-for-buttons) !important;
+}
+.single-page svg {
+  color: var(--font-color) !important;
+}
+.single-page .add-image {
+  margin-bottom: 32px;
+  text-align: left;
+}
+.single-page .add-image form {
+  display: flex;
+  align-items: flex-end;
+}
+.single-page .add-image form textarea {
+  width: 50%;
+  padding: 5px 9px;
+  background-color: rgb(246, 246, 246);
+  border: 1px solid transparent;
+  border-radius: 6px;
+  outline: none;
+}
+.single-page .add-image form input[type=file] {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.single-page .add-image .MuiLinearProgress-root {
+  color: #000;
+  width: 100px;
+  margin-bottom: 2px;
+}
+.single-page .add-image .thumbnail {
+  margin-top: 32px;
+}
+.single-page .add-image .thumbnail img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+.single-page .head-of-page {
+  margin-bottom: 64px;
+}
+.single-page .head-of-page h3 {
+  margin-bottom: 32px;
+}
+.single-page .content-of-page .item {
+  margin-bottom: 32px;
+  cursor: pointer;
+}
+.single-page .content-of-page .item p {
+  margin: 32px 0;
+}
+.single-page .content-of-page .item > div {
+  position: relative;
+}
+.single-page .content-of-page .item > div .overlay {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 600px;
+  margin: auto;
+  background: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  opacity: 0;
+  transition: 0.5s ease-in-out;
+  display: flex;
+  justify-content: flex-end;
+}
+.single-page .content-of-page .item > div .overlay .controls {
+  display: flex;
+}
+.single-page .content-of-page .item > div .overlay .controls svg {
+  margin-top: 8px;
+  margin-right: 8px;
+  color: white;
+  cursor: pointer;
+}
+.single-page .content-of-page .item > div:hover .overlay {
+  opacity: 1;
+}
+.single-page .content-of-page .item img {
+  width: 70%;
+  height: auto;
+  max-width: 600px;
+  margin: auto;
+  object-fit: contain;
+}

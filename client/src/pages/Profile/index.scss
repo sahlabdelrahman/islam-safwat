@@ -1,0 +1,63 @@
+/** @format */
+
+@use "../../scss/variables" as v;
+
+.profile-page {
+  padding: v.$l 0;
+  color: var(--font-color) !important;
+
+  .MuiBox-root {
+    background-color: var(--background-color) !important;
+  }
+
+  .tabpanel {
+    width: 100%;
+  }
+}
+
+.change-password {
+  form {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+
+    > div {
+      display: flex;
+      flex-direction: column;
+      width: 40%;
+      margin-bottom: v.$m;
+
+      label {
+        font-size: 14px;
+        margin-bottom: 4px;
+      }
+
+      input {
+        height: 20px;
+        padding: 5px 9px;
+        background-color: rgb(246, 246, 246);
+        border: 1px solid transparent;
+        border-radius: 6px;
+        outline: none;
+      }
+
+      button {
+        background-color: var(--background-color-for-buttons) !important;
+        color: var(--font-color-for-buttons) !important;
+      }
+    }
+    color: var(--font-color) !important;
+
+    @media (max-width: 899px) {
+      > div {
+        width: 50%;
+      }
+    }
+    @media (max-width: 599px) {
+      > div {
+        width: 60%;
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+/** @format */
+@use "../../scss/variables" as v;
+
+.contact {
+  padding: v.$l 0;
+  background-color: var(--background-color) !important;
+  color: var(--font-color) !important;
+
+  .content {
+    p {
+      margin: v.$l 0;
+    }
+  }
+
+  .form {
+    form {
+      display: flex;
+      flex-direction: column;
+
+      > div {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: v.$m;
+
+        label {
+          font-size: 14px;
+          margin-bottom: 4px;
+        }
+
+        input,
+        textarea {
+          padding: 5px 9px;
+          background-color: rgb(246, 246, 246);
+          border: 1px solid transparent;
+          border-radius: 6px;
+          outline: none;
+        }
+
+        input {
+          height: 20px;
+        }
+
+        .button {
+          background-color: #000;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.MuiPaper-root {
+  background-color: var(--background-color) !important;
+  color: var(--font-color) !important;
+}
+
+.MuiDivider-root {
+  border-color: var(--divider-color) !important;
+}

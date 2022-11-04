@@ -1,0 +1,96 @@
+/** @format */
+
+@use "../../scss/variables" as v;
+
+.bio-page {
+  padding: v.$l 0;
+
+  .bio-component {
+    .edit-image {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-bottom: v.$l;
+
+      .MuiLinearProgress-root {
+        color: #000;
+
+        margin-bottom: 2px;
+      }
+
+      .thumbnail {
+        margin-right: auto;
+        img {
+          width: 100px;
+          height: 100px;
+          object-fit: cover;
+        }
+      }
+
+      input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+    }
+  }
+
+  .bio-editor {
+    margin-bottom: v.$l;
+    button {
+      background-color: var(--background-color) !important;
+      color: var(--font-color) !important;
+
+      &.submit {
+        background-color: var(--background-color-for-buttons) !important;
+        color: var(--font-color-for-buttons) !important;
+      }
+    }
+    color: #000 !important;
+  }
+
+  .bio-content {
+    margin: v.$xl 0;
+    img {
+      width: 176px;
+      height: 176px;
+      padding: 5px;
+      border: 1px solid #ddd;
+      box-sizing: border-box;
+      border-radius: 50%;
+      margin-bottom: v.$l;
+      object-position: center;
+      object-fit: contain;
+    }
+
+    // @media (min-width: 1199px) {
+    //   .img-container {
+    //     text-align: right;
+    //     img {
+    //       height: 80vh;
+    //     }
+    //   }
+    // }
+
+    h1:first-of-type,
+    h2:first-of-type,
+    h3:first-of-type,
+    p:first-of-type,
+    ul:first-of-type,
+    blockquote:first-of-type {
+      margin-top: 0 !important;
+    }
+
+    a {
+      text-decoration: underline !important;
+    }
+  }
+
+  .ck-editor__editable {
+    max-height: 300px !important;
+  }
+  button {
+    background-color: var(--background-color-for-buttons) !important;
+    color: var(--font-color-for-buttons) !important;
+  }
+}

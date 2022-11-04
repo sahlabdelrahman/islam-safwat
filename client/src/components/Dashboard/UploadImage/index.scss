@@ -1,0 +1,30 @@
+/** @format */
+
+@use "../../../scss/variables" as v;
+
+.upload-image {
+  display: flex;
+  align-items: center;
+  margin-bottom: v.$l;
+
+  .MuiLinearProgress-root {
+    color: #000;
+
+    margin-bottom: 2px;
+  }
+
+  .thumbnail {
+    margin-right: auto;
+    img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+    }
+  }
+
+  input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+}

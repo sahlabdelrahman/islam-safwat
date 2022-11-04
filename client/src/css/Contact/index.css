@@ -1,0 +1,46 @@
+/** @format */ /** @format */
+.contact {
+  padding: 32px 0;
+  background-color: var(--background-color) !important;
+  color: var(--font-color) !important;
+}
+.contact .content p {
+  margin: 32px 0;
+}
+.contact .form form {
+  display: flex;
+  flex-direction: column;
+}
+.contact .form form > div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+.contact .form form > div label {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+.contact .form form > div input,
+.contact .form form > div textarea {
+  padding: 5px 9px;
+  background-color: rgb(246, 246, 246);
+  border: 1px solid transparent;
+  border-radius: 6px;
+  outline: none;
+}
+.contact .form form > div input {
+  height: 20px;
+}
+.contact .form form > div .button {
+  background-color: #000;
+  color: #fff;
+}
+
+.MuiPaper-root {
+  background-color: var(--background-color) !important;
+  color: var(--font-color) !important;
+}
+
+.MuiDivider-root {
+  border-color: var(--divider-color) !important;
+}

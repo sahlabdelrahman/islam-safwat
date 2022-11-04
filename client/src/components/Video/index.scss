@@ -1,0 +1,21 @@
+/** @format */
+
+.video-container {
+  position: relative;
+  iframe {
+    width: 70% !important;
+    max-width: 600px !important;
+    margin: auto;
+    background-color: #ccc !important;
+    @media (max-width: 900px) {
+      width: 100% !important;
+    }
+  }
+
+  .close-icon {
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: -30px;
+  }
+}

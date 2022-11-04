@@ -1,0 +1,61 @@
+/** @format */
+.toggle-theme-wrapper {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2px;
+  margin-left: 16px;
+}
+
+.toggle-theme-wrapper span {
+  font-size: 14px;
+}
+
+.toggle-theme {
+  position: relative;
+  display: inline-block;
+  height: 17px;
+  width: 30px;
+}
+
+.toggle-theme input {
+  display: none;
+}
+
+.slider {
+  background-color: #ccc;
+  position: absolute;
+  cursor: pointer;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  transition: 0.2s;
+}
+
+.slider:before {
+  background-color: #fff;
+  bottom: 1px;
+  content: "";
+  height: 13px;
+  left: 2px;
+  position: absolute;
+  transition: 0.4s;
+  width: 13px;
+}
+
+input:checked + .slider:before {
+  transform: translateX(13px);
+}
+
+input:checked + .slider {
+  background-color: cornflowerblue;
+}
+
+.slider.round {
+  border-radius: 17px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}

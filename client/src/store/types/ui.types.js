@@ -1,0 +1,7 @@
+/** @format */
+
+export const SNACKBAR_SUCCESS = "SNACKBAR_SUCCESS";
+export const SNACKBAR_ERROR = "SNACKBAR_ERROR";
+export const SNACKBAR_INFO = "SNACKBAR_INFO";
+export const SNACKBAR_WARNING = "SNACKBAR_WARNING";
+export const SNACKBAR_CLEAR = "SNACKBAR_CLEAR";
